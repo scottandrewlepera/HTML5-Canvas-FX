@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        body {
+            margin: 50px;
+            padding: 0;
+            background-color: #000;
+            height: 100%;
+        }
+        .stack {
+            position: relative;
+        }
+        .stack canvas {
+            position: absolute;
+        }
+
+    </style>
+    </head>
+    <body>
+        <canvas data-dust="30" data-dust-rgb="255,0,0" width="600" height="400"></canvas>
+        <canvas data-scratchlines="15" data-scratchlines-rgb="255,0,0" width="600" height="400"></canvas>
+        <canvas data-dustup="10" data-dustup-max-width="20" width="600" height="400"></canvas>
+        <div class="stack">
+            <canvas data-dust="30" data-dust-rgb="255,0,0" width="600" height="400"></canvas>
+            <canvas data-scratchlines="5" data-scratchlines-rgb="17,17,17" data-scratchlines-max-width="100" width="600" height="400"></canvas>
+        </div>
+    </body>
+    <script type="text/javascript" src="./setup.js"></script>
+    <script type="text/javascript" src="./dust.js"></script>
+    <script type="text/javascript" src="./dustup.js"></script>
+    <script type="text/javascript" src="./scratchlines.js"></script>
+</html>
