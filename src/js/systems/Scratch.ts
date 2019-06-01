@@ -1,4 +1,4 @@
-import { initRequestAnimFrame } from './requestAnimFrame';
+import { initRequestAnimFrame } from '../requestAnimFrame';
 
 export class Scratch {
 
@@ -85,12 +85,13 @@ export function init(window) {
     initRequestAnimFrame(window);
     var document = window.document;
 
-    var canvases = document.querySelectorAll('canvas[data-scratch]');
+    var canvases = document.querySelectorAll('canvas[data-fx="scratches"]');
 
-    Array.from(canvases).forEach( (canvas: any) => {
-        var n = parseInt(canvas.getAttribute('data-scratch'), 10);
-        var mw = parseInt(canvas.getAttribute('data-scratch-max-width'), 10);
-        var rgb = canvas.getAttribute('data-scratch-rgb');
+    Array.from(canvases).forEach( (canvas: HTMLCanvasElement) => {
+
+        var n = parseInt(canvas.getAttribute('data-n'), 10) || 1;
+        var mw = parseInt(canvas.getAttribute('data-max-width'), 10) || 3;
+        var rgb = canvas.getAttribute('data-rgb');
 
         var system = new ScratchSystem(canvas, n, mw, rgb);
 

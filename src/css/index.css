@@ -1,8 +1,11 @@
 body {
     margin: 50px;
     padding: 0;
-    background-color: #000;
+    background: #fff;
     height: 100%;
+}
+canvas {
+    background: #000;
 }
 .stack {
     position: relative;
