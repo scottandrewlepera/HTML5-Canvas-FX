@@ -1,52 +1,13 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>path</title>
+        <link type="text/css" rel="stylesheet" href="../dist/index.css" />
+    </head>
+    <body>
+        <canvas data-fx="path" data-fx-path="ellipse-1" data-fx-particle="dust" data-n="100" width="600" height="400"></canvas>
+        <canvas data-fx="path" data-fx-path="ellipse-1-fine" data-fx-particle="dust" data-n="100" width="600" height="400"></canvas>
 
-<head>
-
-</head>
-
-<body>
-        <canvas style="background: #ccc;" width="600" height="400"></canvas>
-</body>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('boom')
-        var centerX = 300;
-        var centerY = 200;
-        var X_AXIS_RADIUS = 100;
-        var Y_AXIS_RADIUS = 280;
-        var coords = [];
-        /*  for (var i = 0 * Math.PI; i < 2 * Math.PI; i += 0.01) {
-
-           xPos = CENTER_X - (X_AXIS_RADIUS * Math.sin(i)) * Math.sin(0.8 * Math.PI) + (Y_AXIS_RADIUS * Math.cos(i)) * Math.cos(0.8 * Math.PI);
-
-            yPos = CENTER_Y + (Y_AXIS_RADIUS * Math.cos(i)) * Math.sin(0.8 * Math.PI) + (X_AXIS_RADIUS * Math.sin(i)) * Math.cos(0.8 * Math.PI); */
-
-        for (var i = 0.59 * Math.PI; i < 2 * Math.PI; i += 0.01 ) {
-            xPos = centerX - (38 * Math.sin(i)) * Math.sin(0.93 * Math.PI) + (90 * Math.cos(i)) * Math.cos(0.93 * Math.PI);
-            yPos = centerY + (90 * Math.cos(i)) * Math.sin(0.93 * Math.PI) + (38 * Math.sin(i)) * Math.cos(0.93 * Math.PI);
-
-            coords.push({x: Math.floor(xPos), y: Math.floor(yPos)});
-        }
-
-        var canvas = document.querySelector('canvas');
-        var ctx = canvas.getContext('2d');
-
-        ctx.beginPath();
-        
-        coords.forEach( (coord, i) => {
-            console.log(coord.x);
-            if (i == 0) {
-                ctx.moveTo(coord.x, coord.y);
-            } else {
-                ctx.lineTo(coord.x, coord.y);
-            }
-        });
-
-        ctx.stroke();
-
-    });
-
-    </script>
-
+    </body>
+    <script type="text/javascript" src="../dist/main.js"></script>
 </html>
