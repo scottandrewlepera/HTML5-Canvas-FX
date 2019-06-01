@@ -1,0 +1,12 @@
+body {
+    margin: 50px;
+    padding: 0;
+    background-color: #000;
+    height: 100%;
+}
+.stack {
+    position: relative;
+}
+.stack canvas {
+    position: absolute;
+}
