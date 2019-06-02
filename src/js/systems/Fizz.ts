@@ -1,14 +1,15 @@
 import { initRequestAnimFrame } from '../requestAnimFrame';
 import { Particle } from '../types/Particle';
 import { PARTICLES } from '../particles';
-import {DEFAULT_SYSTEM_MAX_WIDTH,  DEFAULT_SYSTEM_RGB, DEFAULT_SYSTEM_COUNT }  from '../constants';
+import { getCanvasAttributes } from '../canvas';
+import { FX_SYSTEM_ATTR } from '../constants';
 
 export class FizzSystem {
 
     particles: any[];
     update: () => void;
 
-    constructor(canvas: HTMLCanvasElement, particleClass: Particle, count: number = DEFAULT_SYSTEM_COUNT, rgb: string = DEFAULT_SYSTEM_RGB, maxWidth: number = DEFAULT_SYSTEM_MAX_WIDTH) {
+    constructor(canvas: HTMLCanvasElement, particleClass: Particle, count: number, rgb: string, maxWidth: number) {
         var ctx = canvas.getContext('2d');
 
         this.particles = [];
@@ -22,8 +23,7 @@ export class FizzSystem {
         this.update = function () {
             for (i = 0; i < count; ++i) {
                 var particle = this.particles[i];
-                // We don't want to process particles that
-                // we can't see anymore
+
                 if (particle.y > 0 &&
                     particle.y < canvas.height) {
                     moveParticle(particle);
@@ -51,16 +51,12 @@ export function init(window, particleClass: Particle) {
     initRequestAnimFrame(window);
     var document = window.document;
 
-    var canvases = document.querySelectorAll('canvas[data-fx="fizz"]');
+    var canvases = document.querySelectorAll(`canvas[${FX_SYSTEM_ATTR}="fizz"]`);
 
     Array.from(canvases).forEach((canvas: HTMLCanvasElement) => {
 
-        var particleClassKey = canvas.getAttribute('data-fx-particle');
+        var { n, rgb, mw ,particleClassKey} = getCanvasAttributes(canvas);
         var particleClass = PARTICLES[particleClassKey];
-
-        var n = parseInt(canvas.getAttribute('data-n'), 10) || DEFAULT_SYSTEM_COUNT;
-        var mw = parseInt(canvas.getAttribute(`data-max-width`), 10) || DEFAULT_SYSTEM_MAX_WIDTH;
-        var rgb = canvas.getAttribute(`data-rgb`) || DEFAULT_SYSTEM_RGB;
         var system = new FizzSystem(canvas, particleClass, n, rgb, mw);
 
         window.requestAnimFrame(paint);

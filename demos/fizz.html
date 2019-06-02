@@ -5,10 +5,12 @@
         <link type="text/css" rel="stylesheet" href="../dist/index.css" />
     </head>
     <body>
-        <canvas data-fx="fizz" data-fx-particle="dust" width="600" height="400"></canvas>
-        <canvas data-fx="fizz" data-fx-particle="dust" data-n="10" data-max-width="3" width="600" height="400"></canvas>
-        <canvas data-fx="fizz" data-fx-particle="globes" data-n="20" data-rgb="0,0,255" data-max-width="20" width="600" height="400"></canvas>
-        <canvas data-fx="fizz" data-fx-particle="globes" data-n="500" data-max-width="3" width="600" height="400"></canvas>
+        <canvas data-fx-system="fizz" data-fx-particle="dust" width="600" height="400"></canvas>
+        <canvas data-fx-system="fizz" data-fx-particle="dust" data-fx-n="10" data-fx-width="3" width="600" height="400"></canvas>
+        <canvas data-fx-system="fizz" data-fx-particle="globes" data-fx-n="20" data-fx-rgb="0,0,255" data-fx-width="20" width="600" height="400"></canvas>
+        <canvas data-fx-system="fizz" data-fx-particle="globes" data-fx-n="500" data-fx-width="3" width="600" height="400"></canvas>
+
+        <canvas style="filter:blur(10px); background: transparent;" data-fx-system="fizz" data-fx-particle="dust" data-fx-n="500" data-fx-width="20" data-fx-rgb="50, 50, 50" width="600" height="400"></canvas>
     </body>
     <script type="text/javascript" src="../dist/main.js"></script>
 </html>

@@ -1,7 +1,8 @@
 import { initRequestAnimFrame } from '../requestAnimFrame';
 import { Particle } from '../types/Particle';
 import { PARTICLES } from '../particles';
-import { DEFAULT_SYSTEM_MAX_WIDTH, DEFAULT_SYSTEM_COUNT, DEFAULT_SYSTEM_RGB }  from '../constants';
+import { getCanvasAttributes } from '../canvas';
+import { FX_SYSTEM_ATTR } from '../constants';
 
 export class ParticleSystem {
 
@@ -10,7 +11,7 @@ export class ParticleSystem {
     initParticle: (particle: any, areaWidth: any, areaHeight: any) => void;
     moveParticle: (particle: any) => void;
 
-    constructor(canvas: HTMLCanvasElement, particleClass: Particle, count: number = DEFAULT_SYSTEM_COUNT, rgb: string = DEFAULT_SYSTEM_RGB, maxWidth: number = DEFAULT_SYSTEM_MAX_WIDTH) {
+    constructor(canvas: HTMLCanvasElement, particleClass: Particle, count: number, rgb: string, maxWidth: number) {
 
         let ctx = canvas.getContext('2d');
 
@@ -60,16 +61,12 @@ export function init(window) {
     initRequestAnimFrame(window);
     var document = window.document;
 
-    var canvases = document.querySelectorAll('canvas[data-fx="dust"]');
+    var canvases = document.querySelectorAll(`canvas[${FX_SYSTEM_ATTR}="dust"]`);
 
     Array.from(canvases).forEach( (canvas: HTMLCanvasElement) => {
 
-        var particleClassKey = canvas.getAttribute('data-fx-particle');
+        var { n, rgb, mw ,particleClassKey} = getCanvasAttributes(canvas);
         var particleClass = PARTICLES[particleClassKey];
-
-        var n = parseInt(canvas.getAttribute('data-n'), 10) || DEFAULT_SYSTEM_COUNT;
-        var rgb = canvas.getAttribute('data-rgb') || DEFAULT_SYSTEM_RGB;
-        var mw = parseInt(canvas.getAttribute(`data-max-width`), 10) || DEFAULT_SYSTEM_MAX_WIDTH;
         var system = new ParticleSystem(canvas, particleClass, n, rgb, mw);
 
         window.requestAnimFrame(paint);
@@ -82,3 +79,5 @@ export function init(window) {
         }
     });
 }
+
+
