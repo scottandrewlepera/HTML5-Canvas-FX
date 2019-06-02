@@ -5,9 +5,10 @@
         <link type="text/css" rel="stylesheet" href="../dist/index.css" />
     </head>
     <body>
-        <canvas data-fx="scratches" width="600" height="400"></canvas>
-        <canvas data-fx="scratches" data-n="2" data-max-width="20" width="600" height="400"></canvas>
-        <canvas data-fx="scratches" data-n="10" data-rgb="0, 255, 0" data-max-width="100" width="600" height="400"></canvas>
+        <canvas data-fx-system="scratches" data-fx-n="1" width="600" height="400"></canvas>
+        <canvas data-fx-system="scratches" data-fx-n="2" data-fx-width="20" width="600" height="400"></canvas>
+        <canvas data-fx-system="scratches" data-fx-n="10" data-fx-rgb="0, 255, 0" data-fx-width="100" width="600" height="400"></canvas>
+        <canvas style="filter: blur(10px); background: transparent;" data-fx-system="scratches" data-fx-n="10" data-fx-rgb="50,50,50" data-fx-width="100" width="600" height="400"></canvas>
     </body>
     <script type="text/javascript" src="../dist/main.js"></script>
 </html>
