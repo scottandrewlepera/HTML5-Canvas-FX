@@ -1,7 +1,7 @@
 {
   "name": "webpack-demo",
   "scripts": {
-    "build": "tsc --build tsconfig.json; cp ./src/js/index.js ./build; webpack; cp ./src/css/index.css ./dist"
+    "build": "tsc --build tsconfig.json; cp ./src/js/index.js ./build; webpack;"
   },
   "devDependencies": {
     "webpack": "^4.32.2",
