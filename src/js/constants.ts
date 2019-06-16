@@ -9,3 +9,4 @@ export const FX_PARTICLE_ATTR = `${FX_PREFIX}-particle`;
 export const FX_PARTICLE_N_ATTR = `${FX_PREFIX}-n`;
 export const FX_PARTICLE_MAXWIDTH_ATTR = `${FX_PREFIX}-width`;
 export const FX_PARTICLE_RGB_ATTR = `${FX_PREFIX}-rgb`;
+export const FX_CANVAS_PAUSED = `${FX_PREFIX}-paused`;

@@ -1,7 +1,7 @@
 import { initRequestAnimFrame } from '../requestAnimFrame';
 import { Particle } from '../types/Particle';
 import { PARTICLES } from '../particles';
-import { getCanvasAttributes } from '../canvas';
+import { getCanvasAttributes, paintCanvas } from '../canvas';
 import { FX_SYSTEM_ATTR } from '../constants';
 
 export class ParticleSystem {
@@ -69,13 +69,11 @@ export function init(window) {
         var particleClass = PARTICLES[particleClassKey];
         var system = new ParticleSystem(canvas, particleClass, n, rgb, mw);
 
-        window.requestAnimFrame(paint);
-
         function paint() {
-            var ctx = canvas.getContext('2d');
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            system.update();
+            paintCanvas(canvas, system, window.fx.paused);
             window.requestAnimFrame(paint);
         }
+        
+        window.requestAnimFrame(paint);
     });
 }

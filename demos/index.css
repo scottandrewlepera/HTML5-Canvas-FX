@@ -13,3 +13,7 @@ canvas {
 .stack canvas {
     position: absolute;
 }
+
+.anim-control {
+    position: static;
+}

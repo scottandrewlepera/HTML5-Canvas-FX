@@ -1,5 +1,5 @@
 import { initRequestAnimFrame } from '../requestAnimFrame';
-import { getCanvasAttributes } from '../canvas';
+import { getCanvasAttributes, paintCanvas } from '../canvas';
 import { FX_SYSTEM_ATTR } from '../constants';
 
 export class FlickerSystem {
@@ -33,14 +33,12 @@ export function init(window) {
 
         let { rgb } = getCanvasAttributes(canvas);
         let system = new FlickerSystem(canvas, rgb);
-        let ctx = canvas.getContext('2d');
         
-        window.requestAnimFrame(paint);
-
         function paint() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            system.update();
+            paintCanvas(canvas, system, window.fx.paused);
             window.requestAnimFrame(paint);
         }
+        
+        window.requestAnimFrame(paint);
     });
 }

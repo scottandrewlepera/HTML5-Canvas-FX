@@ -1,5 +1,5 @@
 import { initRequestAnimFrame } from '../requestAnimFrame';
-import { getCanvasAttributes } from '../canvas';
+import { getCanvasAttributes, paintCanvas } from '../canvas';
 import { FX_SYSTEM_ATTR } from '../constants';
 
 export class Scratch {
@@ -95,13 +95,10 @@ export function init(window) {
 
         var system = new ScratchSystem(canvas, n, mw, rgb);
 
-        window.requestAnimFrame(paint);
-
         function paint() {
-            var ctx = canvas.getContext('2d');
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            system.update();
+            paintCanvas(canvas, system, window.fx.paused);
             window.requestAnimFrame(paint);
         }
+        window.requestAnimFrame(paint);
     });
 }
