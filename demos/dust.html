@@ -6,7 +6,7 @@
     </head>
     <body>
         <div class="anim-control">
-            Pause animations <input type="checkbox" onchange="window.fx.togglePaused();" />
+            <label for="pause-fx">Pause animations</label> <input id="pause-fx" type="checkbox" onchange="window.fx.togglePaused();" />
         </div>
         <canvas data-fx-system="dust" data-fx-particle="dust" width="600" height="400"></canvas><br />
         <canvas data-fx-system="dust" data-fx-particle="dust" data-fx-width="3" data-fx-n="30" width="600" height="400"></canvas><br />
