@@ -4,6 +4,7 @@ import { init as FizzSystemInit } from './systems/Fizz';
 import { init as PathSystemInit } from './systems/Path';
 import { init as FlickerSystemInit } from './systems/Flicker';
 import { initCanvasIntersectionObserver } from './initCanvasIntersectionObserver';
+import { handleImageProgress } from './handleImageProgress';
 
 window.fx = {
     paused: false,
@@ -11,6 +12,8 @@ window.fx = {
         window.fx.paused = !window.fx.paused;
     }
 };
+
+window.handleImageProgress = handleImageProgress;
 
 initCanvasIntersectionObserver();
 
