@@ -1,8 +1,7 @@
 import { initRequestAnimFrame } from '../requestAnimFrame';
 import { Particle } from '../types/Particle';
 import { PARTICLES } from '../particles';
-import { getCanvasAttributes, paintCanvas } from '../canvas';
-import { FX_SYSTEM_ATTR } from '../constants';
+import { getCanvasAttributes, paintCanvas, getCanvases } from '../canvas';
 
 export class ParticleSystem {
 
@@ -59,13 +58,12 @@ export class ParticleSystem {
 export function init(window) {
 
     initRequestAnimFrame(window);
-    var document = window.document;
 
-    var canvases = document.querySelectorAll(`canvas[${FX_SYSTEM_ATTR}="dust"]`);
+    var canvases = getCanvases('dust');
 
     Array.from(canvases).forEach( (canvas: HTMLCanvasElement) => {
 
-        var { n, rgb, mw ,particleClassKey} = getCanvasAttributes(canvas);
+        var { n, rgb, mw, particleClassKey} = getCanvasAttributes(canvas);
         var particleClass = PARTICLES[particleClassKey];
         var system = new ParticleSystem(canvas, particleClass, n, rgb, mw);
 

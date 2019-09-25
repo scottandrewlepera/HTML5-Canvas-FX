@@ -1,6 +1,5 @@
 import { initRequestAnimFrame } from '../requestAnimFrame';
-import { getCanvasAttributes, paintCanvas } from '../canvas';
-import { FX_SYSTEM_ATTR } from '../constants';
+import { getCanvasAttributes, paintCanvas, getCanvases } from '../canvas';
 
 export class Scratch {
 
@@ -85,9 +84,7 @@ export class ScratchSystem {
 export function init(window) {
 
     initRequestAnimFrame(window);
-    var document = window.document;
-
-    var canvases = document.querySelectorAll(`canvas[${FX_SYSTEM_ATTR}="scratches"]`);
+    var canvases = getCanvases('scratches');
 
     Array.from(canvases).forEach( (canvas: HTMLCanvasElement) => {
 

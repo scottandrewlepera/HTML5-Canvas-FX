@@ -2,8 +2,8 @@ import { initRequestAnimFrame } from '../requestAnimFrame';
 import { Particle } from '../types/Particle';
 import { PARTICLES } from '../particles';
 import { PATHS } from '../paths';
-import { getCanvasAttributes, paintCanvas } from '../canvas';
-import { FX_SYSTEM_ATTR, FX_PATH_ATTR } from '../constants';
+import { getCanvasAttributes, paintCanvas, getCanvases } from '../canvas';
+import { FX_PATH_ATTR } from '../constants';
 
 export class PathSystem {
 
@@ -49,15 +49,16 @@ export class PathSystem {
 export function init(window) {
 
     initRequestAnimFrame(window);
-    var document = window.document;
 
-    var canvases = document.querySelectorAll(`canvas[${FX_SYSTEM_ATTR}="path"]`);
+    var canvases = getCanvases('path');
 
     Array.from(canvases).forEach( (canvas: HTMLCanvasElement) => {
 
         var pathKey = canvas.getAttribute(FX_PATH_ATTR);
         var path = PATHS[pathKey];
-
+        if (!path) {
+            path = window.fx.paths[pathKey];
+        }
         var { n, rgb, mw ,particleClassKey} = getCanvasAttributes(canvas);
         var particleClass = PARTICLES[particleClassKey];
         var system = new PathSystem(canvas, particleClass, path, n, rgb, mw);

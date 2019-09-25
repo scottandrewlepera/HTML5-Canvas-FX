@@ -1,0 +1,1 @@
+export type System = 'fizz' | 'path' | 'scratches' | 'flicker' | 'dust';

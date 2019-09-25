@@ -6,9 +6,9 @@
 </head>
 
 <body>
-        <canvas style="background: #ccc;" width="600" height="400"></canvas>
-
-        <textarea id="foo"></textarea>
+        <canvas style="background: #ccc;" width="800" height="800"></canvas>
+        <br />
+        <textarea id="foo" style="min-width: 500px"></textarea>
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -18,20 +18,39 @@
 
         var centerX = Math.round(canvas.width / 2);
         var centerY = Math.round(canvas.height / 2);;
-        var Y_AXIS_RADIUS = 90;
-        var X_AXIS_RADIUS = 260;
+        var Y_AXIS_RADIUS = 100;
+        var X_AXIS_RADIUS = 500;
         var ANGLE = 0;
         var coords = [];
-         for (var i = 0 * Math.PI; i < 2 * Math.PI; i += 0.02) {
+
+        /*
+        http://scienceprimer.com/draw-oval-html5-canvas
+        */
+       
+        /*  for (var i = 0 * Math.PI; i < 2 * Math.PI; i += 0.02) {
              
             xPos = centerX - (Y_AXIS_RADIUS * Math.sin(i)) * Math.sin(ANGLE * Math.PI) + (X_AXIS_RADIUS * Math.cos(i)) * Math.cos(ANGLE * Math.PI);
 
             yPos = centerY + (X_AXIS_RADIUS * Math.cos(i)) * Math.sin(ANGLE * Math.PI) + (Y_AXIS_RADIUS * Math.sin(i)) * Math.cos(ANGLE * Math.PI);
-
+ */
        /*  for (var i = 0.59 * Math.PI; i < 2 * Math.PI; i += 0.01 ) {
             xPos = centerX - (38 * Math.sin(i)) * Math.sin(0.93 * Math.PI) + (90 * Math.cos(i)) * Math.cos(0.93 * Math.PI);
             yPos = centerY + (90 * Math.cos(i)) * Math.sin(0.93 * Math.PI) + (38 * Math.sin(i)) * Math.cos(0.93 * Math.PI);
         */
+
+        /* for (var i = 0.20 * Math.PI; i < 1.76 * Math.PI; i += 0.01 ) {
+        xPos = centerX - (Y_AXIS_RADIUS * Math.sin(i)) * Math.sin(0.88 * Math.PI) + (X_AXIS_RADIUS * Math.cos(i)) * Math.cos(0.88 * Math.PI);
+        yPos = centerY + (X_AXIS_RADIUS * Math.cos(i)) * Math.sin(0.88 * Math.PI) + (Y_AXIS_RADIUS * Math.sin(i)) * Math.cos(0.88 * Math.PI); */
+
+        /* for (var i = 0 * Math.PI; i < 0.99 * Math.PI; i += 0.01 ) {
+            
+            xPos = centerX - (Y_AXIS_RADIUS * Math.sin(i)) * Math.sin(1.99 * Math.PI) + (300 * Math.cos(i)) * Math.cos(1.99 * Math.PI);
+            yPos = 0  + (300 * Math.cos(i)) * Math.sin(1.99 * Math.PI) + (Y_AXIS_RADIUS * Math.sin(i)) * Math.cos(1.99 * Math.PI); */
+
+            for (var i = 0 * Math.PI; i < 0.84 * Math.PI; i += 0.01 ) {
+                xPos = centerX - (Y_AXIS_RADIUS * Math.sin(i)) * Math.sin(0.2 * Math.PI) + (X_AXIS_RADIUS * Math.cos(i)) * Math.cos(0.2 * Math.PI);
+                yPos = centerY + (X_AXIS_RADIUS * Math.cos(i)) * Math.sin(0.2 * Math.PI) + (Y_AXIS_RADIUS * Math.sin(i)) * Math.cos(0.2 * Math.PI);
+    
             coords.push({x: Math.floor(xPos), y: Math.floor(yPos)});
          
        }

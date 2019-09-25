@@ -1,8 +1,7 @@
 import { initRequestAnimFrame } from '../requestAnimFrame';
 import { Particle } from '../types/Particle';
 import { PARTICLES } from '../particles';
-import { getCanvasAttributes, paintCanvas } from '../canvas';
-import { FX_SYSTEM_ATTR } from '../constants';
+import { getCanvasAttributes, paintCanvas, getCanvases } from '../canvas';
 
 export class FizzSystem {
 
@@ -49,9 +48,8 @@ export class FizzSystem {
 export function init(window, particleClass: Particle) {
 
     initRequestAnimFrame(window);
-    var document = window.document;
 
-    var canvases = document.querySelectorAll(`canvas[${FX_SYSTEM_ATTR}="fizz"]`);
+    var canvases = getCanvases('fizz');
 
     Array.from(canvases).forEach((canvas: HTMLCanvasElement) => {
 

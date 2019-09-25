@@ -7,14 +7,32 @@
 </head>
 
 <body>
+    <h1>Path</h1>
     <div class="anim-control">
-        <label for="pause-fx">Pause animations</label> <input id="pause-fx" type="checkbox" onchange="window.fx.togglePaused();" />
+        <label for="pause-fx">Pause animations</label>
+        <input id="pause-fx" type="checkbox" onchange="window.fx.togglePaused();" />
     </div>
-    <canvas data-fx-system="path" data-fx-path="ellipse-1" data-fx-particle="dust" data-fx-n="100" data-fx-width="2"
-        width="600" height="400"></canvas>
-    <canvas data-fx-system="path" data-fx-path="ellipse-1-fine" data-fx-particle="dust" data-fx-width="10"
-        data-fx-n="100" width="600" height="400"></canvas>
+<canvas
+    data-fx-system="path"
+    data-fx-path="ellipse-1"
+    data-fx-particle="dust"
+    data-fx-n="100"
+    data-fx-width="10"
+    data-fx-color="#ff0000"
+    width="600"
+    height="400">
+</canvas>
+<canvas
+    data-fx-system="path"
+    data-fx-path="ellipse-1-fine"
+    data-fx-particle="dust"
+    data-fx-width="20"
+    data-fx-n="100"
+    data-fx-color="#0000ff"
+    width="600"
+    height="400">
+</canvas>
 </body>
 <script type="text/javascript" src="../dist/main.js"></script>
-
+<script type="text/javascript" src="./index.js"></script>
 </html>
