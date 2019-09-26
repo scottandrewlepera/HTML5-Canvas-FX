@@ -1,5 +1,5 @@
 import { initRequestAnimFrame } from '../requestAnimFrame';
-import { FX_SYSTEM_JITTER_ATTR } from '../constants';
+import { FX_SYSTEM_JITTER_ATTR, FX_CANVAS_PAUSED} from '../constants';
 
 export class FilterSystem {
 
@@ -55,7 +55,7 @@ export function init(window) {
         let timer = Date.now();
         
         function paint() {
-            if (!window.fx.paused) {
+            if (!window.fx.paused && element.getAttribute(FX_CANVAS_PAUSED) !== 'true') {
                 if (Date.now() - timer >= max) {
                     timer = Date.now();
                     system.update();
