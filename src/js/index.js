@@ -4,6 +4,7 @@ import { init as FizzSystemInit } from './systems/Fizz';
 import { init as PathSystemInit } from './systems/Path';
 import { init as FlickerSystemInit } from './systems/Flicker';
 import { init as JitterSystemInit } from './systems/Jitter';
+import { init as BloomSystemInit } from './systems/Bloom';
 import { initCanvasIntersectionObserver } from './initCanvasIntersectionObserver';
 import { handleImageProgress } from './handleImageProgress';
 
@@ -24,3 +25,4 @@ FizzSystemInit(window);
 PathSystemInit(window);
 FlickerSystemInit(window);
 JitterSystemInit(window);
+BloomSystemInit(window);

@@ -9,8 +9,10 @@
 <body>
     <h1>Flicker</h1>
     <div class="anim-control">
-        <label for="pause-fx">Pause animations</label>
-        <input id="pause-fx" type="checkbox" onchange="window.fx.togglePaused();" />
+        <form autocomplete="off">
+            <label for="pause-fx">Pause animations</label>
+            <input id="pause-fx" type="checkbox" onchange="window.fx.togglePaused();" />
+        </form>
     </div>
     <h2>Max alpha 0.05</h2>
 <canvas
@@ -18,7 +20,8 @@
     data-fx-color="000"
     data-fx-alpha="0.05"
     width="600"
-    height="400">
+    height="400"
+    data-show-code>
 </canvas>
 <h2>Max alpha 0.5</h2>
 <canvas style="background:#000;"
@@ -26,7 +29,8 @@
     data-fx-color="990000"
     data-fx-alpha="0.5"
     width="600"
-    height="400">
+    height="400"
+    data-show-code>
 </canvas>
 </body>
 <script type="text/javascript" src="../dist/main.js"></script>

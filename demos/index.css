@@ -13,8 +13,35 @@ canvas {
 
 pre {
     font-size: 16px;
+    background: #eee;
+    padding: 20px;
 }
 
 .anim-control {
     padding: 10px;
+}
+
+.bloom-1, .bloom-3 {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border: 1px solid #000;
+    margin: 100px 0;
+}
+
+.bloom-2 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    margin: 100px;
+}
+
+.bloom-2 > .fx-bloom {
+    opacity: 0.5;
+    filter:blur(10px);
+}
+
+.bloom-3 > .fx-bloom {
+    border: 1px solid blue;
 }

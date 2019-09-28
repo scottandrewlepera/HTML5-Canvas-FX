@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bloom</title>
+        <link type="text/css" rel="stylesheet" href="index.css" />
+        <link type="text/css" rel="stylesheet" href="../dist/index.css" />
+    </head>
+    <body>
+        <h1>Bloom</h1>
+        <div class="anim-control">
+            <form autocomplete="off">
+                <label for="pause-fx">Pause animations</label>
+                <input id="pause-fx" type="checkbox" onchange="window.fx.togglePaused();" />
+            </form>
+        </div>
+
+        <div class="bloom bloom-1"
+            data-fx-system="bloom"
+            data-fx-bloom-n="20"
+            data-fx-bloom-maxWidth="100"
+            data-fx-bloom-maxDuration="1000"
+            data-fx-bloom-maxDelay="500"
+            data-fx-bloom-colors="blue, red, green, orange, yellow, violet, indigo"
+            data-show-code
+        >
+        </div>
+
+        <div class="bloom bloom-2 show-code"
+            data-fx-system="bloom"
+            data-fx-bloom-n="20"
+            data-fx-bloom-maxWidth="200"
+            data-fx-bloom-maxDuration="1000"
+            data-fx-bloom-maxDelay="500"
+            data-fx-bloom-colors="orange, red, yellow"
+            data-show-code
+        >
+        </div>
+
+        <div class="bloom bloom-3 show-code"
+            data-fx-system="bloom"
+            data-fx-bloom-n="20"
+            data-fx-bloom-maxWidth="100"
+            data-fx-bloom-maxDuration="2000"
+            data-fx-bloom-maxDelay="1000"
+            data-show-code
+        >
+        </div>
+
+    </body>
+    <script type="text/javascript" src="../dist/main.js"></script>
+    <script type="text/javascript" src="./index.js"></script>
+</html>

@@ -7,31 +7,37 @@
     <body>
         <h1>Fizz</h1>
         <div class="anim-control">
-            <label for="pause-fx">Pause animations</label>
-            <input id="pause-fx" type="checkbox" onchange="window.fx.togglePaused();" />
+            <form autocomplete="off">
+                <label for="pause-fx">Pause animations</label>
+                <input id="pause-fx" type="checkbox" onchange="window.fx.togglePaused();" />
+            </form>
         </div>
 <canvas
     data-fx-system="fizz"
-    data-fx-particle="dust" width="600" height="400">
+    data-fx-particle="dust" width="600" height="400"
+    data-show-code>
 </canvas>
 <canvas
     data-fx-system="fizz"
     data-fx-particle="dust"
     data-fx-n="10"
-    data-fx-width="3" width="600" height="400">
+    data-fx-width="3" width="600" height="400"
+    data-show-code>
 </canvas>
 <canvas
     data-fx-system="fizz"
     data-fx-particle="globes"
     data-fx-n="20"
     data-fx-color="#0000ff"
-    data-fx-width="20" width="600" height="400">
+    data-fx-width="20" width="600" height="400"
+    data-show-code>
 </canvas>
 <canvas
     data-fx-system="fizz"
     data-fx-particle="globes"
     data-fx-n="500"
-    data-fx-width="3" width="600" height="400">
+    data-fx-width="3" width="600" height="400"
+    data-show-code>
 </canvas>
 
 <canvas style="filter:blur(10px);"
@@ -39,7 +45,8 @@
     data-fx-particle="dust"
     data-fx-n="500"
     data-fx-width="20"
-    data-fx-color="333333" width="600" height="400">
+    data-fx-color="333333" width="600" height="400"
+    data-show-code>
 </canvas>
     </body>
     <script type="text/javascript" src="../dist/main.js"></script>
