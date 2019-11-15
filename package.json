@@ -1,12 +1,14 @@
 {
-  "name": "webpack-demo",
+  "name": "HTML5FX",
   "scripts": {
-    "build": "tsc --build tsconfig.json; cp ./src/js/index.js ./build; webpack; cp ./src/css/index.css ./dist/",
+    "build": "mkdir -p dist; webpack; cp ./src/css/index.css ./dist/",
     "clean": "rm -rf dist node_modules"
   },
   "devDependencies": {
     "webpack": "^4.32.2",
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "^3.3.2",
+    "typescript": "*",
+    "ts-loader": "*"
   },
   "dependencies": {}
 }
