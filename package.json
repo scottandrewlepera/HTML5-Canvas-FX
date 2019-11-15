@@ -1,8 +1,8 @@
 {
   "name": "webpack-demo",
   "scripts": {
-    "build": "tsc --build tsconfig.json; cp ./src/js/index.js ./build; webpack; cp ./src/css/index.css ./dist",
-    "clean": "rm -rf dist"
+    "build": "tsc --build tsconfig.json; cp ./src/js/index.js ./build; webpack; cp ./src/css/index.css ./dist/",
+    "clean": "rm -rf dist node_modules"
   },
   "devDependencies": {
     "webpack": "^4.32.2",
