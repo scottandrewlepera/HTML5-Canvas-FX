@@ -1,5 +1,5 @@
 import { initRequestAnimFrame } from '../requestAnimFrame';
-import { FX_SYSTEM_ATTR } from '../constants';
+import { FX_SYSTEM_ATTR, FX_CANVAS_PAUSED } from '../constants';
 
 const CLUSTER_CLASS = 'fx-bloom-cluster';
 
@@ -39,6 +39,7 @@ export function init(window) {
 export class BloomCluster {
 
     blooms: any[];
+    isPaused: boolean;
 
     constructor(element: HTMLElement, window: any) {
 
@@ -66,29 +67,40 @@ export class BloomCluster {
 
             this.blooms.push(bloom);
 
-            const updateBloomProps = function() {
-                if (!window.fx.paused) {
-                    const props = generateBloomProperties(maxBloomWidth, areaWidth, areaHeight, colorChoices, maxDelay);
-                    bloom.initialize(props.bloomWidth, props.x, props.y, props.color, maxDuration, props.delay);
-                    window.setTimeout(updateBloomProps, props.delay + maxDuration);
+            const max = props.delay + maxDuration;
+            const timer = Date.now();
+
+            const updateBloomProps = function(max, timer) {
+                if (Date.now() - timer >= max &&
+                    !window.fx.paused &&
+                    element.getAttribute(FX_CANVAS_PAUSED) !== 'true') {
+                        const props = generateBloomProperties(maxBloomWidth, areaWidth, areaHeight, colorChoices, maxDelay);
+                        bloom.initialize(props.bloomWidth, props.x, props.y, props.color, maxDuration, props.delay);
+                        const newMax = props.delay + maxDuration;
+                        const newTimer = Date.now();
+                        window.requestAnimFrame( function() { updateBloomProps(newMax, newTimer) });
                 } else {
-                    window.setTimeout(updateBloomProps, 500);
+                    window.requestAnimFrame( function() { updateBloomProps(max, timer) });
                 }
             }
+                
             element.appendChild(bloom.getElement());
-            window.setTimeout( updateBloomProps, props.delay + (maxDuration / 1000));
+
+            window.requestAnimFrame( function() { updateBloomProps(max, timer) });
         }
     }
 
     public pause() {
         this.blooms.forEach( bloom => {
             bloom.pause();
-        })
+        });
+        this.isPaused = true;
     }
     public resume() {
         this.blooms.forEach( bloom => {
             bloom.resume();
-        })
+        });
+        this.isPaused = false;
     }
 };
 

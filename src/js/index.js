@@ -17,7 +17,7 @@ window.fx = {
 
 window.handleImageProgress = handleImageProgress;
 
-initCanvasIntersectionObserver();
+initCanvasIntersectionObserver(window);
 
 ScratchSystemInit(window);
 ParticleSystemInit(window);
