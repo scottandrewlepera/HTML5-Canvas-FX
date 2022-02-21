@@ -5,9 +5,9 @@
     "clean": "rm -rf dist node_modules"
   },
   "devDependencies": {
-    "webpack": "^4.32.2",
-    "webpack-cli": "^3.3.2",
+    "ts-loader": "^6.2.1",
     "typescript": "^3.7.2",
-    "ts-loader": "^6.2.1"
+    "webpack": "^5.69.1",
+    "webpack-cli":"^4.9.2"
   }
 }

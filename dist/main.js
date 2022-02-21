@@ -1,145 +1,13 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _systems_Scratch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _systems_Scratch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_systems_Scratch__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _systems_Dust__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
-/* harmony import */ var _systems_Dust__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_systems_Dust__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _systems_Fizz__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
-/* harmony import */ var _systems_Fizz__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_systems_Fizz__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _systems_Path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10);
-/* harmony import */ var _systems_Path__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_systems_Path__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _systems_Flicker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
-/* harmony import */ var _systems_Flicker__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_systems_Flicker__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _systems_Bloom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(14);
-/* harmony import */ var _systems_Bloom__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_systems_Bloom__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _initCanvasIntersectionObserver__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(15);
-/* harmony import */ var _initCanvasIntersectionObserver__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_initCanvasIntersectionObserver__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _handleImageProgress__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(16);
-/* harmony import */ var _handleImageProgress__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_handleImageProgress__WEBPACK_IMPORTED_MODULE_7__);
-
-
-
-
-
-
-
-
-
-window.fx = {
-    paused: false,
-    togglePaused: function() {
-        window.fx.paused = !window.fx.paused;
-    }
-};
-
-window.handleImageProgress = _handleImageProgress__WEBPACK_IMPORTED_MODULE_7__["handleImageProgress"];
-
-Object(_initCanvasIntersectionObserver__WEBPACK_IMPORTED_MODULE_6__["initCanvasIntersectionObserver"])(window);
-
-Object(_systems_Scratch__WEBPACK_IMPORTED_MODULE_0__["init"])(window);
-Object(_systems_Dust__WEBPACK_IMPORTED_MODULE_1__["init"])(window);
-Object(_systems_Fizz__WEBPACK_IMPORTED_MODULE_2__["init"])(window);
-Object(_systems_Path__WEBPACK_IMPORTED_MODULE_3__["init"])(window);
-Object(_systems_Flicker__WEBPACK_IMPORTED_MODULE_4__["init"])(window);
-Object(_systems_Bloom__WEBPACK_IMPORTED_MODULE_5__["init"])(window);
-
-/***/ }),
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ([
+/* 0 */,
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.init = exports.ScratchSystem = exports.Scratch = void 0;
 var requestAnimFrame_1 = __webpack_require__(2);
 var canvas_1 = __webpack_require__(3);
 var Scratch = (function () {
@@ -222,11 +90,11 @@ exports.init = init;
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.initRequestAnimFrame = void 0;
 function initRequestAnimFrame(window) {
     if (!window.requestAnimFrame) {
         window.requestAnimFrame = (function () {
@@ -247,11 +115,11 @@ exports["default"] = initRequestAnimFrame;
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.getCanvases = exports.paintCanvas = exports.getCanvasAttributes = void 0;
 var c = __webpack_require__(4);
 function getCanvasAttributes(canvas) {
     var n = parseInt(canvas.getAttribute(c.FX_PARTICLE_N_ATTR), 10) || c.DEFAULT_SYSTEM_COUNT;
@@ -296,11 +164,11 @@ function hexToRgb(hex) {
 
 /***/ }),
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.FX_SYSTEM_JITTER_ATTR = exports.FX_SYSTEM_MAX_ALPHA = exports.FX_CANVAS_PAUSED = exports.FX_PARTICLE_COLOR_ATTR = exports.FX_PARTICLE_RGB_ATTR = exports.FX_PARTICLE_MAXWIDTH_ATTR = exports.FX_PARTICLE_N_ATTR = exports.FX_PARTICLE_ATTR = exports.FX_PATH_ATTR = exports.FX_SYSTEM_ATTR = exports.DEFAULT_SYSTEM_MAX_ALPHA = exports.DEFAULT_SYSTEM_MAX_WIDTH = exports.DEFAULT_SYSTEM_COUNT = exports.DEFAULT_SYSTEM_COLOR = exports.DEFAULT_SYSTEM_RGB = void 0;
 exports.DEFAULT_SYSTEM_RGB = '0,0,0';
 exports.DEFAULT_SYSTEM_COLOR = '#ffffff';
 exports.DEFAULT_SYSTEM_COUNT = 10;
@@ -321,11 +189,11 @@ exports.FX_SYSTEM_JITTER_ATTR = FX_PREFIX + "-jitter";
 
 /***/ }),
 /* 5 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.init = exports.ParticleSystem = void 0;
 var requestAnimFrame_1 = __webpack_require__(2);
 var particles_1 = __webpack_require__(6);
 var canvas_1 = __webpack_require__(3);
@@ -386,11 +254,11 @@ exports.init = init;
 
 /***/ }),
 /* 6 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.PARTICLES = void 0;
 var DustMote_1 = __webpack_require__(7);
 var Globe_1 = __webpack_require__(8);
 exports.PARTICLES = {
@@ -402,11 +270,11 @@ exports["default"] = exports.PARTICLES;
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.DustMote = void 0;
 var DustMote = (function () {
     function DustMote(rgb, maxWidth) {
         this.alpha = 1;
@@ -427,11 +295,11 @@ exports.DustMote = DustMote;
 
 /***/ }),
 /* 8 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.Globe = void 0;
 var Globe = (function () {
     function Globe(rgb, maxWidth) {
         this.alpha = 1;
@@ -454,11 +322,11 @@ exports.Globe = Globe;
 
 /***/ }),
 /* 9 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.init = exports.FizzSystem = void 0;
 var requestAnimFrame_1 = __webpack_require__(2);
 var particles_1 = __webpack_require__(6);
 var canvas_1 = __webpack_require__(3);
@@ -516,11 +384,11 @@ exports.init = init;
 
 /***/ }),
 /* 10 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.init = exports.PathSystem = void 0;
 var requestAnimFrame_1 = __webpack_require__(2);
 var particles_1 = __webpack_require__(6);
 var paths_1 = __webpack_require__(11);
@@ -580,11 +448,11 @@ exports.init = init;
 
 /***/ }),
 /* 11 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.PATHS = void 0;
 var ellipse_1 = __webpack_require__(12);
 exports.PATHS = {
     'ellipse-1': ellipse_1.Ellipse1,
@@ -598,11 +466,11 @@ exports["default"] = exports.PATHS;
 
 /***/ }),
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.path3 = exports.path2 = exports.path1 = exports.Ellipse1Fine = exports.Ellipse1 = void 0;
 exports.Ellipse1 = [{ "x": 560, "y": 200 }, { "x": 559, "y": 204 }, { "x": 558, "y": 208 }, { "x": 557, "y": 213 }, { "x": 554, "y": 217 }, { "x": 551, "y": 222 }, { "x": 548, "y": 226 }, { "x": 544, "y": 230 }, { "x": 539, "y": 235 }, { "x": 534, "y": 239 }, { "x": 528, "y": 243 }, { "x": 521, "y": 247 }, { "x": 514, "y": 250 }, { "x": 506, "y": 254 }, { "x": 498, "y": 257 }, { "x": 490, "y": 261 }, { "x": 481, "y": 264 }, { "x": 471, "y": 267 }, { "x": 461, "y": 270 }, { "x": 451, "y": 273 }, { "x": 440, "y": 275 }, { "x": 429, "y": 278 }, { "x": 417, "y": 280 }, { "x": 406, "y": 282 }, { "x": 394, "y": 283 }, { "x": 381, "y": 285 }, { "x": 369, "y": 286 }, { "x": 356, "y": 287 }, { "x": 344, "y": 288 }, { "x": 331, "y": 289 }, { "x": 318, "y": 289 }, { "x": 305, "y": 289 }, { "x": 292, "y": 289 }, { "x": 279, "y": 289 }, { "x": 266, "y": 289 }, { "x": 253, "y": 288 }, { "x": 240, "y": 287 }, { "x": 228, "y": 286 }, { "x": 215, "y": 285 }, { "x": 203, "y": 283 }, { "x": 191, "y": 281 }, { "x": 180, "y": 279 }, { "x": 168, "y": 277 }, { "x": 157, "y": 275 }, { "x": 146, "y": 272 }, { "x": 136, "y": 270 }, { "x": 126, "y": 267 }, { "x": 117, "y": 264 }, { "x": 108, "y": 260 }, { "x": 99, "y": 257 }, { "x": 91, "y": 253 }, { "x": 84, "y": 250 }, { "x": 77, "y": 246 }, { "x": 70, "y": 242 }, { "x": 64, "y": 238 }, { "x": 59, "y": 234 }, { "x": 55, "y": 230 }, { "x": 50, "y": 225 }, { "x": 47, "y": 221 }, { "x": 44, "y": 217 }, { "x": 42, "y": 212 }, { "x": 41, "y": 208 }, { "x": 40, "y": 203 }, { "x": 40, "y": 199 }, { "x": 40, "y": 194 }, { "x": 41, "y": 190 }, { "x": 43, "y": 185 }, { "x": 45, "y": 181 }, { "x": 48, "y": 177 }, { "x": 52, "y": 172 }, { "x": 56, "y": 168 }, { "x": 61, "y": 164 }, { "x": 66, "y": 160 }, { "x": 72, "y": 156 }, { "x": 79, "y": 152 }, { "x": 86, "y": 148 }, { "x": 94, "y": 144 }, { "x": 102, "y": 141 }, { "x": 111, "y": 138 }, { "x": 120, "y": 134 }, { "x": 130, "y": 131 }, { "x": 140, "y": 129 }, { "x": 150, "y": 126 }, { "x": 161, "y": 123 }, { "x": 172, "y": 121 }, { "x": 184, "y": 119 }, { "x": 195, "y": 117 }, { "x": 207, "y": 115 }, { "x": 220, "y": 114 }, { "x": 232, "y": 113 }, { "x": 245, "y": 112 }, { "x": 257, "y": 111 }, { "x": 270, "y": 110 }, { "x": 283, "y": 110 }, { "x": 296, "y": 110 }, { "x": 309, "y": 110 }, { "x": 322, "y": 110 }, { "x": 335, "y": 110 }, { "x": 348, "y": 111 }, { "x": 361, "y": 112 }, { "x": 373, "y": 113 }, { "x": 386, "y": 115 }, { "x": 398, "y": 116 }, { "x": 410, "y": 118 }, { "x": 421, "y": 120 }, { "x": 433, "y": 122 }, { "x": 444, "y": 125 }, { "x": 454, "y": 127 }, { "x": 465, "y": 130 }, { "x": 474, "y": 133 }, { "x": 484, "y": 136 }, { "x": 493, "y": 139 }, { "x": 501, "y": 143 }, { "x": 509, "y": 146 }, { "x": 517, "y": 150 }, { "x": 523, "y": 154 }, { "x": 530, "y": 158 }, { "x": 535, "y": 162 }, { "x": 541, "y": 166 }, { "x": 545, "y": 170 }, { "x": 549, "y": 174 }, { "x": 552, "y": 179 }, { "x": 555, "y": 183 }, { "x": 557, "y": 188 }, { "x": 559, "y": 192 }, { "x": 559, "y": 197 }];
 exports.Ellipse1Fine = [{ "x": 560, "y": 200 }, { "x": 559, "y": 201 }, { "x": 559, "y": 203 }, { "x": 559, "y": 205 }, { "x": 559, "y": 207 }, { "x": 558, "y": 208 }, { "x": 558, "y": 210 }, { "x": 557, "y": 212 }, { "x": 556, "y": 214 }, { "x": 555, "y": 216 }, { "x": 554, "y": 217 }, { "x": 553, "y": 219 }, { "x": 552, "y": 221 }, { "x": 551, "y": 223 }, { "x": 549, "y": 224 }, { "x": 548, "y": 226 }, { "x": 546, "y": 228 }, { "x": 545, "y": 230 }, { "x": 543, "y": 231 }, { "x": 541, "y": 233 }, { "x": 539, "y": 235 }, { "x": 537, "y": 236 }, { "x": 535, "y": 238 }, { "x": 532, "y": 239 }, { "x": 530, "y": 241 }, { "x": 528, "y": 243 }, { "x": 525, "y": 244 }, { "x": 523, "y": 246 }, { "x": 520, "y": 247 }, { "x": 517, "y": 249 }, { "x": 514, "y": 250 }, { "x": 511, "y": 252 }, { "x": 508, "y": 253 }, { "x": 505, "y": 255 }, { "x": 502, "y": 256 }, { "x": 498, "y": 257 }, { "x": 495, "y": 259 }, { "x": 492, "y": 260 }, { "x": 488, "y": 262 }, { "x": 484, "y": 263 }, { "x": 481, "y": 264 }, { "x": 477, "y": 265 }, { "x": 473, "y": 267 }, { "x": 469, "y": 268 }, { "x": 465, "y": 269 }, { "x": 461, "y": 270 }, { "x": 457, "y": 271 }, { "x": 453, "y": 272 }, { "x": 449, "y": 273 }, { "x": 444, "y": 274 }, { "x": 440, "y": 275 }, { "x": 436, "y": 276 }, { "x": 431, "y": 277 }, { "x": 427, "y": 278 }, { "x": 422, "y": 279 }, { "x": 417, "y": 280 }, { "x": 413, "y": 281 }, { "x": 408, "y": 281 }, { "x": 403, "y": 282 }, { "x": 399, "y": 283 }, { "x": 394, "y": 283 }, { "x": 389, "y": 284 }, { "x": 384, "y": 285 }, { "x": 379, "y": 285 }, { "x": 374, "y": 286 }, { "x": 369, "y": 286 }, { "x": 364, "y": 287 }, { "x": 359, "y": 287 }, { "x": 354, "y": 288 }, { "x": 349, "y": 288 }, { "x": 344, "y": 288 }, { "x": 339, "y": 288 }, { "x": 333, "y": 289 }, { "x": 328, "y": 289 }, { "x": 323, "y": 289 }, { "x": 318, "y": 289 }, { "x": 313, "y": 289 }, { "x": 308, "y": 289 }, { "x": 302, "y": 289 }, { "x": 297, "y": 289 }, { "x": 292, "y": 289 }, { "x": 287, "y": 289 }, { "x": 282, "y": 289 }, { "x": 276, "y": 289 }, { "x": 271, "y": 289 }, { "x": 266, "y": 289 }, { "x": 261, "y": 289 }, { "x": 256, "y": 288 }, { "x": 251, "y": 288 }, { "x": 246, "y": 288 }, { "x": 240, "y": 287 }, { "x": 235, "y": 287 }, { "x": 230, "y": 286 }, { "x": 225, "y": 286 }, { "x": 220, "y": 285 }, { "x": 215, "y": 285 }, { "x": 211, "y": 284 }, { "x": 206, "y": 283 }, { "x": 201, "y": 283 }, { "x": 196, "y": 282 }, { "x": 191, "y": 281 }, { "x": 187, "y": 281 }, { "x": 182, "y": 280 }, { "x": 177, "y": 279 }, { "x": 173, "y": 278 }, { "x": 168, "y": 277 }, { "x": 164, "y": 276 }, { "x": 159, "y": 275 }, { "x": 155, "y": 274 }, { "x": 151, "y": 273 }, { "x": 146, "y": 272 }, { "x": 142, "y": 271 }, { "x": 138, "y": 270 }, { "x": 134, "y": 269 }, { "x": 130, "y": 268 }, { "x": 126, "y": 267 }, { "x": 122, "y": 265 }, { "x": 119, "y": 264 }, { "x": 115, "y": 263 }, { "x": 111, "y": 262 }, { "x": 108, "y": 260 }, { "x": 104, "y": 259 }, { "x": 101, "y": 258 }, { "x": 98, "y": 256 }, { "x": 94, "y": 255 }, { "x": 91, "y": 253 }, { "x": 88, "y": 252 }, { "x": 85, "y": 250 }, { "x": 82, "y": 249 }, { "x": 79, "y": 247 }, { "x": 77, "y": 246 }, { "x": 74, "y": 244 }, { "x": 72, "y": 243 }, { "x": 69, "y": 241 }, { "x": 67, "y": 240 }, { "x": 64, "y": 238 }, { "x": 62, "y": 236 }, { "x": 60, "y": 235 }, { "x": 58, "y": 233 }, { "x": 56, "y": 231 }, { "x": 55, "y": 230 }, { "x": 53, "y": 228 }, { "x": 51, "y": 226 }, { "x": 50, "y": 225 }, { "x": 48, "y": 223 }, { "x": 47, "y": 221 }, { "x": 46, "y": 219 }, { "x": 45, "y": 218 }, { "x": 44, "y": 216 }, { "x": 43, "y": 214 }, { "x": 42, "y": 212 }, { "x": 41, "y": 210 }, { "x": 41, "y": 209 }, { "x": 40, "y": 207 }, { "x": 40, "y": 205 }, { "x": 40, "y": 203 }, { "x": 40, "y": 201 }, { "x": 40, "y": 200 }, { "x": 40, "y": 198 }, { "x": 40, "y": 196 }, { "x": 40, "y": 194 }, { "x": 40, "y": 192 }, { "x": 41, "y": 191 }, { "x": 41, "y": 189 }, { "x": 42, "y": 187 }, { "x": 43, "y": 185 }, { "x": 44, "y": 184 }, { "x": 45, "y": 182 }, { "x": 46, "y": 180 }, { "x": 47, "y": 178 }, { "x": 48, "y": 177 }, { "x": 50, "y": 175 }, { "x": 51, "y": 173 }, { "x": 53, "y": 171 }, { "x": 54, "y": 170 }, { "x": 56, "y": 168 }, { "x": 58, "y": 166 }, { "x": 60, "y": 165 }, { "x": 62, "y": 163 }, { "x": 64, "y": 161 }, { "x": 66, "y": 160 }, { "x": 69, "y": 158 }, { "x": 71, "y": 156 }, { "x": 74, "y": 155 }, { "x": 76, "y": 153 }, { "x": 79, "y": 152 }, { "x": 82, "y": 150 }, { "x": 85, "y": 149 }, { "x": 88, "y": 147 }, { "x": 91, "y": 146 }, { "x": 94, "y": 144 }, { "x": 97, "y": 143 }, { "x": 100, "y": 142 }, { "x": 104, "y": 140 }, { "x": 107, "y": 139 }, { "x": 111, "y": 138 }, { "x": 114, "y": 136 }, { "x": 118, "y": 135 }, { "x": 122, "y": 134 }, { "x": 126, "y": 133 }, { "x": 130, "y": 131 }, { "x": 134, "y": 130 }, { "x": 138, "y": 129 }, { "x": 142, "y": 128 }, { "x": 146, "y": 127 }, { "x": 150, "y": 126 }, { "x": 154, "y": 125 }, { "x": 159, "y": 124 }, { "x": 163, "y": 123 }, { "x": 168, "y": 122 }, { "x": 172, "y": 121 }, { "x": 177, "y": 120 }, { "x": 181, "y": 119 }, { "x": 186, "y": 119 }, { "x": 191, "y": 118 }, { "x": 195, "y": 117 }, { "x": 200, "y": 116 }, { "x": 205, "y": 116 }, { "x": 210, "y": 115 }, { "x": 215, "y": 114 }, { "x": 220, "y": 114 }, { "x": 225, "y": 113 }, { "x": 230, "y": 113 }, { "x": 235, "y": 112 }, { "x": 240, "y": 112 }, { "x": 245, "y": 112 }, { "x": 250, "y": 111 }, { "x": 255, "y": 111 }, { "x": 260, "y": 111 }, { "x": 265, "y": 110 }, { "x": 270, "y": 110 }, { "x": 276, "y": 110 }, { "x": 281, "y": 110 }, { "x": 286, "y": 110 }, { "x": 291, "y": 110 }, { "x": 296, "y": 110 }, { "x": 301, "y": 110 }, { "x": 307, "y": 110 }, { "x": 312, "y": 110 }, { "x": 317, "y": 110 }, { "x": 322, "y": 110 }, { "x": 327, "y": 110 }, { "x": 333, "y": 110 }, { "x": 338, "y": 110 }, { "x": 343, "y": 111 }, { "x": 348, "y": 111 }, { "x": 353, "y": 111 }, { "x": 358, "y": 112 }, { "x": 363, "y": 112 }, { "x": 368, "y": 113 }, { "x": 373, "y": 113 }, { "x": 378, "y": 114 }, { "x": 383, "y": 114 }, { "x": 388, "y": 115 }, { "x": 393, "y": 116 }, { "x": 398, "y": 116 }, { "x": 403, "y": 117 }, { "x": 407, "y": 118 }, { "x": 412, "y": 118 }, { "x": 417, "y": 119 }, { "x": 421, "y": 120 }, { "x": 426, "y": 121 }, { "x": 430, "y": 122 }, { "x": 435, "y": 123 }, { "x": 439, "y": 124 }, { "x": 444, "y": 125 }, { "x": 448, "y": 126 }, { "x": 452, "y": 127 }, { "x": 456, "y": 128 }, { "x": 460, "y": 129 }, { "x": 465, "y": 130 }, { "x": 469, "y": 131 }, { "x": 472, "y": 132 }, { "x": 476, "y": 134 }, { "x": 480, "y": 135 }, { "x": 484, "y": 136 }, { "x": 487, "y": 137 }, { "x": 491, "y": 139 }, { "x": 494, "y": 140 }, { "x": 498, "y": 141 }, { "x": 501, "y": 143 }, { "x": 504, "y": 144 }, { "x": 508, "y": 146 }, { "x": 511, "y": 147 }, { "x": 514, "y": 148 }, { "x": 517, "y": 150 }, { "x": 519, "y": 151 }, { "x": 522, "y": 153 }, { "x": 525, "y": 155 }, { "x": 527, "y": 156 }, { "x": 530, "y": 158 }, { "x": 532, "y": 159 }, { "x": 534, "y": 161 }, { "x": 537, "y": 163 }, { "x": 539, "y": 164 }, { "x": 541, "y": 166 }, { "x": 543, "y": 168 }, { "x": 544, "y": 169 }, { "x": 546, "y": 171 }, { "x": 548, "y": 173 }, { "x": 549, "y": 174 }, { "x": 551, "y": 176 }, { "x": 552, "y": 178 }, { "x": 553, "y": 180 }, { "x": 554, "y": 181 }, { "x": 555, "y": 183 }, { "x": 556, "y": 185 }, { "x": 557, "y": 187 }, { "x": 558, "y": 188 }, { "x": 558, "y": 190 }, { "x": 559, "y": 192 }, { "x": 559, "y": 194 }, { "x": 559, "y": 196 }, { "x": 559, "y": 197 }, { "x": 559, "y": 199 }];
 exports.path1 = [{ "x": 140, "y": 308 }, { "x": 141, "y": 306 }, { "x": 143, "y": 304 }, { "x": 144, "y": 302 }, { "x": 146, "y": 300 }, { "x": 147, "y": 298 }, { "x": 149, "y": 296 }, { "x": 151, "y": 293 }, { "x": 152, "y": 291 }, { "x": 154, "y": 289 }, { "x": 156, "y": 287 }, { "x": 157, "y": 285 }, { "x": 159, "y": 283 }, { "x": 161, "y": 281 }, { "x": 163, "y": 278 }, { "x": 165, "y": 276 }, { "x": 167, "y": 274 }, { "x": 168, "y": 272 }, { "x": 170, "y": 270 }, { "x": 172, "y": 268 }, { "x": 174, "y": 266 }, { "x": 176, "y": 264 }, { "x": 178, "y": 262 }, { "x": 181, "y": 259 }, { "x": 183, "y": 257 }, { "x": 185, "y": 255 }, { "x": 187, "y": 253 }, { "x": 189, "y": 251 }, { "x": 191, "y": 249 }, { "x": 194, "y": 247 }, { "x": 196, "y": 245 }, { "x": 198, "y": 243 }, { "x": 201, "y": 241 }, { "x": 203, "y": 239 }, { "x": 205, "y": 237 }, { "x": 208, "y": 235 }, { "x": 210, "y": 233 }, { "x": 212, "y": 231 }, { "x": 215, "y": 229 }, { "x": 217, "y": 227 }, { "x": 220, "y": 225 }, { "x": 222, "y": 223 }, { "x": 225, "y": 221 }, { "x": 228, "y": 219 }, { "x": 230, "y": 217 }, { "x": 233, "y": 215 }, { "x": 235, "y": 213 }, { "x": 238, "y": 211 }, { "x": 241, "y": 209 }, { "x": 244, "y": 207 }, { "x": 246, "y": 205 }, { "x": 249, "y": 203 }, { "x": 252, "y": 201 }, { "x": 255, "y": 199 }, { "x": 257, "y": 197 }, { "x": 260, "y": 196 }, { "x": 263, "y": 194 }, { "x": 266, "y": 192 }, { "x": 269, "y": 190 }, { "x": 272, "y": 188 }, { "x": 275, "y": 186 }, { "x": 278, "y": 185 }, { "x": 281, "y": 183 }, { "x": 284, "y": 181 }, { "x": 287, "y": 179 }, { "x": 290, "y": 177 }, { "x": 293, "y": 176 }, { "x": 296, "y": 174 }, { "x": 299, "y": 172 }, { "x": 302, "y": 171 }, { "x": 305, "y": 169 }, { "x": 308, "y": 167 }, { "x": 311, "y": 166 }, { "x": 314, "y": 164 }, { "x": 317, "y": 162 }, { "x": 320, "y": 161 }, { "x": 324, "y": 159 }, { "x": 327, "y": 157 }, { "x": 330, "y": 156 }, { "x": 333, "y": 154 }, { "x": 336, "y": 153 }, { "x": 340, "y": 151 }, { "x": 343, "y": 150 }, { "x": 346, "y": 148 }, { "x": 349, "y": 147 }, { "x": 353, "y": 145 }, { "x": 356, "y": 144 }, { "x": 359, "y": 142 }, { "x": 362, "y": 141 }, { "x": 366, "y": 139 }, { "x": 369, "y": 138 }, { "x": 372, "y": 137 }, { "x": 376, "y": 135 }, { "x": 379, "y": 134 }, { "x": 382, "y": 132 }, { "x": 386, "y": 131 }, { "x": 389, "y": 130 }, { "x": 392, "y": 129 }, { "x": 396, "y": 127 }, { "x": 399, "y": 126 }, { "x": 403, "y": 125 }, { "x": 406, "y": 124 }, { "x": 409, "y": 122 }, { "x": 413, "y": 121 }, { "x": 416, "y": 120 }, { "x": 420, "y": 119 }, { "x": 423, "y": 118 }, { "x": 426, "y": 117 }, { "x": 430, "y": 116 }, { "x": 433, "y": 114 }, { "x": 437, "y": 113 }, { "x": 440, "y": 112 }, { "x": 443, "y": 111 }, { "x": 447, "y": 110 }, { "x": 450, "y": 109 }, { "x": 454, "y": 108 }, { "x": 457, "y": 107 }, { "x": 460, "y": 107 }, { "x": 464, "y": 106 }, { "x": 467, "y": 105 }, { "x": 471, "y": 104 }, { "x": 474, "y": 103 }, { "x": 477, "y": 102 }, { "x": 481, "y": 101 }, { "x": 484, "y": 101 }, { "x": 488, "y": 100 }, { "x": 491, "y": 99 }, { "x": 494, "y": 98 }, { "x": 498, "y": 98 }, { "x": 501, "y": 97 }, { "x": 505, "y": 96 }, { "x": 508, "y": 96 }, { "x": 511, "y": 95 }, { "x": 515, "y": 94 }, { "x": 518, "y": 94 }, { "x": 521, "y": 93 }, { "x": 525, "y": 93 }, { "x": 528, "y": 92 }, { "x": 531, "y": 92 }, { "x": 535, "y": 91 }, { "x": 538, "y": 91 }, { "x": 541, "y": 90 }, { "x": 544, "y": 90 }, { "x": 548, "y": 90 }, { "x": 551, "y": 89 }, { "x": 554, "y": 89 }, { "x": 558, "y": 88 }, { "x": 561, "y": 88 }, { "x": 564, "y": 88 }, { "x": 567, "y": 88 }, { "x": 570, "y": 87 }, { "x": 574, "y": 87 }, { "x": 577, "y": 87 }, { "x": 580, "y": 87 }, { "x": 583, "y": 87 }, { "x": 586, "y": 86 }, { "x": 589, "y": 86 }, { "x": 592, "y": 86 }, { "x": 595, "y": 86 }, { "x": 599, "y": 86 }, { "x": 602, "y": 86 }, { "x": 605, "y": 86 }, { "x": 608, "y": 86 }, { "x": 611, "y": 86 }, { "x": 614, "y": 86 }, { "x": 617, "y": 86 }, { "x": 620, "y": 86 }, { "x": 623, "y": 86 }, { "x": 626, "y": 87 }, { "x": 628, "y": 87 }, { "x": 631, "y": 87 }, { "x": 634, "y": 87 }, { "x": 637, "y": 87 }, { "x": 640, "y": 88 }, { "x": 643, "y": 88 }, { "x": 646, "y": 88 }, { "x": 648, "y": 88 }, { "x": 651, "y": 89 }, { "x": 654, "y": 89 }, { "x": 657, "y": 89 }, { "x": 659, "y": 90 }, { "x": 662, "y": 90 }, { "x": 665, "y": 91 }, { "x": 667, "y": 91 }, { "x": 670, "y": 92 }, { "x": 672, "y": 92 }, { "x": 675, "y": 93 }, { "x": 678, "y": 93 }, { "x": 680, "y": 94 }, { "x": 683, "y": 94 }, { "x": 685, "y": 95 }, { "x": 688, "y": 95 }, { "x": 690, "y": 96 }, { "x": 692, "y": 97 }, { "x": 695, "y": 97 }, { "x": 697, "y": 98 }, { "x": 699, "y": 99 }, { "x": 702, "y": 100 }, { "x": 704, "y": 100 }, { "x": 706, "y": 101 }, { "x": 709, "y": 102 }, { "x": 711, "y": 103 }, { "x": 713, "y": 104 }, { "x": 715, "y": 104 }, { "x": 717, "y": 105 }, { "x": 719, "y": 106 }, { "x": 721, "y": 107 }, { "x": 723, "y": 108 }, { "x": 725, "y": 109 }, { "x": 727, "y": 110 }, { "x": 729, "y": 111 }, { "x": 731, "y": 112 }, { "x": 733, "y": 113 }, { "x": 735, "y": 114 }, { "x": 737, "y": 115 }, { "x": 739, "y": 116 }, { "x": 741, "y": 117 }, { "x": 742, "y": 118 }, { "x": 744, "y": 120 }, { "x": 746, "y": 121 }, { "x": 748, "y": 122 }, { "x": 749, "y": 123 }, { "x": 751, "y": 124 }, { "x": 752, "y": 125 }, { "x": 754, "y": 127 }, { "x": 755, "y": 128 }, { "x": 757, "y": 129 }, { "x": 758, "y": 131 }, { "x": 760, "y": 132 }, { "x": 761, "y": 133 }, { "x": 763, "y": 135 }, { "x": 764, "y": 136 }, { "x": 765, "y": 137 }, { "x": 767, "y": 139 }, { "x": 768, "y": 140 }, { "x": 769, "y": 142 }, { "x": 770, "y": 143 }, { "x": 771, "y": 144 }, { "x": 772, "y": 146 }, { "x": 774, "y": 147 }, { "x": 775, "y": 149 }, { "x": 776, "y": 150 }, { "x": 777, "y": 152 }, { "x": 778, "y": 154 }, { "x": 778, "y": 155 }, { "x": 779, "y": 157 }, { "x": 780, "y": 158 }, { "x": 781, "y": 160 }, { "x": 782, "y": 161 }, { "x": 783, "y": 163 }, { "x": 783, "y": 165 }, { "x": 784, "y": 166 }, { "x": 785, "y": 168 }, { "x": 785, "y": 170 }, { "x": 786, "y": 171 }, { "x": 786, "y": 173 }, { "x": 787, "y": 175 }, { "x": 787, "y": 177 }, { "x": 788, "y": 178 }, { "x": 788, "y": 180 }, { "x": 789, "y": 182 }, { "x": 789, "y": 184 }, { "x": 789, "y": 186 }, { "x": 790, "y": 187 }, { "x": 790, "y": 189 }, { "x": 790, "y": 191 }, { "x": 790, "y": 193 }, { "x": 790, "y": 195 }, { "x": 791, "y": 197 }, { "x": 791, "y": 198 }, { "x": 791, "y": 200 }, { "x": 791, "y": 202 }, { "x": 791, "y": 204 }, { "x": 791, "y": 206 }, { "x": 791, "y": 208 }, { "x": 790, "y": 210 }, { "x": 790, "y": 212 }, { "x": 790, "y": 214 }, { "x": 790, "y": 216 }, { "x": 790, "y": 218 }, { "x": 789, "y": 220 }, { "x": 789, "y": 222 }, { "x": 789, "y": 224 }, { "x": 788, "y": 226 }, { "x": 788, "y": 228 }, { "x": 787, "y": 230 }, { "x": 787, "y": 232 }, { "x": 786, "y": 234 }, { "x": 786, "y": 236 }, { "x": 785, "y": 238 }, { "x": 784, "y": 240 }, { "x": 784, "y": 242 }, { "x": 783, "y": 244 }, { "x": 782, "y": 246 }, { "x": 782, "y": 248 }, { "x": 781, "y": 250 }, { "x": 780, "y": 252 }, { "x": 779, "y": 254 }, { "x": 778, "y": 256 }, { "x": 777, "y": 259 }, { "x": 776, "y": 261 }, { "x": 775, "y": 263 }, { "x": 774, "y": 265 }, { "x": 773, "y": 267 }, { "x": 772, "y": 269 }, { "x": 771, "y": 271 }, { "x": 770, "y": 273 }, { "x": 769, "y": 275 }, { "x": 767, "y": 278 }, { "x": 766, "y": 280 }, { "x": 765, "y": 282 }, { "x": 764, "y": 284 }, { "x": 762, "y": 286 }, { "x": 761, "y": 288 }, { "x": 759, "y": 290 }, { "x": 758, "y": 292 }, { "x": 757, "y": 295 }, { "x": 755, "y": 297 }, { "x": 754, "y": 299 }, { "x": 752, "y": 301 }, { "x": 750, "y": 303 }, { "x": 749, "y": 305 }, { "x": 747, "y": 307 }, { "x": 745, "y": 310 }, { "x": 744, "y": 312 }, { "x": 742, "y": 314 }, { "x": 740, "y": 316 }, { "x": 738, "y": 318 }, { "x": 737, "y": 320 }, { "x": 735, "y": 322 }, { "x": 733, "y": 324 }, { "x": 731, "y": 327 }, { "x": 729, "y": 329 }, { "x": 727, "y": 331 }, { "x": 725, "y": 333 }, { "x": 723, "y": 335 }, { "x": 721, "y": 337 }, { "x": 719, "y": 339 }, { "x": 717, "y": 341 }, { "x": 715, "y": 343 }, { "x": 712, "y": 345 }, { "x": 710, "y": 348 }, { "x": 708, "y": 350 }, { "x": 706, "y": 352 }, { "x": 703, "y": 354 }, { "x": 701, "y": 356 }, { "x": 699, "y": 358 }, { "x": 697, "y": 360 }, { "x": 694, "y": 362 }, { "x": 692, "y": 364 }, { "x": 689, "y": 366 }, { "x": 687, "y": 368 }, { "x": 684, "y": 370 }, { "x": 682, "y": 372 }, { "x": 679, "y": 374 }, { "x": 677, "y": 376 }, { "x": 674, "y": 378 }, { "x": 672, "y": 380 }, { "x": 669, "y": 382 }, { "x": 667, "y": 384 }, { "x": 664, "y": 386 }, { "x": 661, "y": 388 }, { "x": 659, "y": 390 }, { "x": 656, "y": 392 }, { "x": 653, "y": 394 }, { "x": 650, "y": 396 }, { "x": 648, "y": 398 }, { "x": 645, "y": 399 }, { "x": 642, "y": 401 }, { "x": 639, "y": 403 }, { "x": 636, "y": 405 }, { "x": 633, "y": 407 }, { "x": 631, "y": 409 }, { "x": 628, "y": 411 }, { "x": 625, "y": 412 }, { "x": 622, "y": 414 }, { "x": 619, "y": 416 }, { "x": 616, "y": 418 }, { "x": 613, "y": 420 }, { "x": 610, "y": 421 }, { "x": 607, "y": 423 }, { "x": 604, "y": 425 }, { "x": 601, "y": 426 }, { "x": 598, "y": 428 }, { "x": 595, "y": 430 }, { "x": 592, "y": 432 }, { "x": 588, "y": 433 }, { "x": 585, "y": 435 }, { "x": 582, "y": 437 }, { "x": 579, "y": 438 }, { "x": 576, "y": 440 }, { "x": 573, "y": 441 }, { "x": 570, "y": 443 }, { "x": 566, "y": 445 }, { "x": 563, "y": 446 }, { "x": 560, "y": 448 }, { "x": 557, "y": 449 }, { "x": 553, "y": 451 }, { "x": 550, "y": 452 }, { "x": 547, "y": 454 }, { "x": 544, "y": 455 }, { "x": 540, "y": 457 }, { "x": 537, "y": 458 }, { "x": 534, "y": 459 }, { "x": 530, "y": 461 }, { "x": 527, "y": 462 }, { "x": 524, "y": 464 }, { "x": 520, "y": 465 }, { "x": 517, "y": 466 }, { "x": 514, "y": 468 }, { "x": 510, "y": 469 }, { "x": 507, "y": 470 }, { "x": 504, "y": 472 }, { "x": 500, "y": 473 }, { "x": 497, "y": 474 }, { "x": 494, "y": 475 }, { "x": 490, "y": 476 }, { "x": 487, "y": 478 }, { "x": 483, "y": 479 }, { "x": 480, "y": 480 }, { "x": 477, "y": 481 }, { "x": 473, "y": 482 }, { "x": 470, "y": 483 }, { "x": 466, "y": 484 }, { "x": 463, "y": 485 }, { "x": 460, "y": 486 }, { "x": 456, "y": 487 }, { "x": 453, "y": 488 }, { "x": 449, "y": 489 }, { "x": 446, "y": 490 }, { "x": 443, "y": 491 }, { "x": 439, "y": 492 }, { "x": 436, "y": 493 }, { "x": 432, "y": 494 }, { "x": 429, "y": 495 }, { "x": 425, "y": 496 }, { "x": 422, "y": 497 }, { "x": 419, "y": 497 }, { "x": 415, "y": 498 }, { "x": 412, "y": 499 }, { "x": 408, "y": 500 }, { "x": 405, "y": 500 }, { "x": 402, "y": 501 }, { "x": 398, "y": 502 }, { "x": 395, "y": 503 }, { "x": 392, "y": 503 }, { "x": 388, "y": 504 }, { "x": 385, "y": 504 }, { "x": 382, "y": 505 }, { "x": 378, "y": 506 }, { "x": 375, "y": 506 }, { "x": 372, "y": 507 }, { "x": 368, "y": 507 }, { "x": 365, "y": 508 }, { "x": 362, "y": 508 }, { "x": 358, "y": 509 }, { "x": 355, "y": 509 }, { "x": 352, "y": 509 }, { "x": 349, "y": 510 }, { "x": 345, "y": 510 }, { "x": 342, "y": 510 }, { "x": 339, "y": 511 }, { "x": 336, "y": 511 }, { "x": 332, "y": 511 }, { "x": 329, "y": 512 }, { "x": 326, "y": 512 }, { "x": 323, "y": 512 }, { "x": 320, "y": 512 }, { "x": 316, "y": 512 }, { "x": 313, "y": 513 }, { "x": 310, "y": 513 }, { "x": 307, "y": 513 }, { "x": 304, "y": 513 }, { "x": 301, "y": 513 }, { "x": 298, "y": 513 }, { "x": 295, "y": 513 }, { "x": 292, "y": 513 }, { "x": 289, "y": 513 }, { "x": 286, "y": 513 }, { "x": 283, "y": 513 }, { "x": 280, "y": 513 }, { "x": 277, "y": 513 }, { "x": 274, "y": 513 }, { "x": 271, "y": 512 }, { "x": 268, "y": 512 }, { "x": 265, "y": 512 }, { "x": 262, "y": 512 }, { "x": 260, "y": 512 }, { "x": 257, "y": 511 }, { "x": 254, "y": 511 }, { "x": 251, "y": 511 }];
@@ -612,11 +480,11 @@ exports.path3 = [{ "x": 804, "y": 693 }, { "x": 803, "y": 694 }, { "x": 803, "y"
 
 /***/ }),
 /* 13 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.init = exports.FlickerSystem = void 0;
 var requestAnimFrame_1 = __webpack_require__(2);
 var canvas_1 = __webpack_require__(3);
 var FlickerSystem = (function () {
@@ -652,11 +520,11 @@ exports.init = init;
 
 /***/ }),
 /* 14 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.Bloom = exports.generateBloomProperties = exports.BloomCluster = exports.init = void 0;
 var requestAnimFrame_1 = __webpack_require__(2);
 var constants_1 = __webpack_require__(4);
 var CLUSTER_CLASS = 'fx-bloom-cluster';
@@ -785,11 +653,11 @@ exports.Bloom = Bloom;
 
 /***/ }),
 /* 15 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.initCanvasIntersectionObserver = void 0;
 var constants_1 = __webpack_require__(4);
 var requestAnimFrame_1 = __webpack_require__(2);
 function initCanvasIntersectionObserver(window) {
@@ -822,11 +690,11 @@ exports.initCanvasIntersectionObserver = initCanvasIntersectionObserver;
 
 /***/ }),
 /* 16 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 
 exports.__esModule = true;
+exports.handleImageProgress = void 0;
 var counter = 0;
 function handleImageProgress(document, selector, callback) {
     if (selector === void 0) { selector = 'img'; }
@@ -855,4 +723,84 @@ function update(totalImages, callback) {
 
 
 /***/ })
-/******/ ]);
+/******/ 	]);
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _systems_Scratch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _systems_Dust__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
+/* harmony import */ var _systems_Fizz__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var _systems_Path__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10);
+/* harmony import */ var _systems_Flicker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
+/* harmony import */ var _systems_Bloom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(14);
+/* harmony import */ var _initCanvasIntersectionObserver__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(15);
+/* harmony import */ var _handleImageProgress__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(16);
+
+
+
+
+
+
+
+
+
+window.fx = {
+    paused: false,
+    togglePaused: function() {
+        window.fx.paused = !window.fx.paused;
+    }
+};
+
+window.handleImageProgress = _handleImageProgress__WEBPACK_IMPORTED_MODULE_7__.handleImageProgress;
+
+(0,_initCanvasIntersectionObserver__WEBPACK_IMPORTED_MODULE_6__.initCanvasIntersectionObserver)(window);
+
+(0,_systems_Scratch__WEBPACK_IMPORTED_MODULE_0__.init)(window);
+(0,_systems_Dust__WEBPACK_IMPORTED_MODULE_1__.init)(window);
+(0,_systems_Fizz__WEBPACK_IMPORTED_MODULE_2__.init)(window);
+(0,_systems_Path__WEBPACK_IMPORTED_MODULE_3__.init)(window);
+(0,_systems_Flicker__WEBPACK_IMPORTED_MODULE_4__.init)(window);
+(0,_systems_Bloom__WEBPACK_IMPORTED_MODULE_5__.init)(window);
+})();
+
+/******/ })()
+;
