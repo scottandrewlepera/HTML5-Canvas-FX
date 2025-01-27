@@ -21,7 +21,3 @@ To add the library to your webpage, copy the `dist` folder over to where your we
 ## Using the library
 
 See the [demos](demos) for usage examples.
-
-## Developing this library
-
-TBD
